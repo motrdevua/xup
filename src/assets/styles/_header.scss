@@ -1,0 +1,38 @@
+/*! .header */
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  width: 100%;
+  border-bottom: 1px solid $line_bg;
+  background: $white;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    & .img-wrap {
+      width: 75px;
+    }
+    &::before {
+      content: none;
+    }
+  }
+  &__button {
+    min-width: 210px;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 40px;
+  max-width: 760px;
+  width: 100%;
+  &__item {
+  }
+}
+
+/*! .header end*/

@@ -1,0 +1,293 @@
+// =====================  Utils  ==========================
+
+@import 'utils/mixin_font-face';
+@import 'utils/fontstylesheet';
+
+@import 'utils/reset';
+@import 'utils/nulling';
+
+@import 'utils/variables';
+@import 'utils/mixin_rfs';
+
+// ====================  Default  =========================
+
+/*! Defaults */
+
+html, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-width: $minWidth + px;
+  width: 100%;
+  height: 100%;
+  color: $gray_text;
+
+  @include m_14_r;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 8px;
+    background: rgba(73, 82, 92, .25);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    padding: 1px;
+    border-radius: 3px;
+    background: $blue70;
+    -webkit-transition: all .2s linear;
+            transition: all .2s linear;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    padding: 1px;
+    border-radius: 3px;
+    background: darken($blue70, 10);
+    -webkit-transition: all .2s linear;
+            transition: all .2s linear;
+  }
+}
+
+
+// sticky footer (always at the bottom of page)
+
+.wrapper {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+}
+
+.header {
+  flex: 0 0 auto;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+  height: 10vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: $maxWidth + px;
+  width: 100%;
+  @media screen and (max-width: $lg + px) {
+    max-width: calc(1188.98px - 30px);
+  }
+  @media screen and (max-width: $md + px) {
+    max-width: calc(992.98px - 30px);
+  }
+  @media screen and (max-width: $sm + px) {
+    max-width: calc(768.98px - 30px);
+  }
+  @media screen and (max-width: $s + px) {
+    max-width: calc(575.98px - 30px);
+  }
+}
+
+.img-wrap {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+
+  & img, & svg, & picture {
+    max-width: 100%;
+
+    object-fit: cover;
+  }
+}
+
+.button {
+  display: inline-block;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+
+  @include m_16_b;
+  &::before {
+    content: none;
+  }
+  &:hover, &:active, &:focus {
+    transition: all .2s ease-in-out;
+  }
+  &--filled {
+    padding: 18px 32px;
+    background: $blue;
+    color: $white;
+    -webkit-filter: drop-shadow(0px 22px 44px rgba(20, 33, 255, .18));
+            filter: drop-shadow(0px 22px 44px rgba(20, 33, 255, .18));
+    &:hover, &:active, &:focus, &:disabled {
+      color: $white;
+      -webkit-filter: drop-shadow(0px 22px 44px rgba(20, 33, 255, 0));
+              filter: drop-shadow(0px 22px 44px rgba(20, 33, 255, 0));
+    }
+    &:hover {
+      background: $blue70;
+    }
+    &:active, &:focus {
+      background: $black;
+    }
+    &:disabled {
+      background: $gray_text;
+    }
+  }
+  &--empty {
+    padding: 12px 30px;
+    border: 2px solid $blue;
+    background: $white;
+    color: $blue;
+    &:hover {
+      border: 2px solid $blue70;
+      color: $blue70;
+    }
+    &:active, &:focus {
+      border: 2px solid $black;
+      color: $black;
+    }
+    &:disabled {
+      border: 2px solid $gray_text;
+      color: $gray_text;
+    }
+  }
+}
+
+a {
+  position: relative;
+  color: $blue;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+
+  @include m_14_sb;
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: $blue;
+    content: '';
+    transition: all .2s ease-in-out;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  &:hover, &:active, &:focus {
+    transition: all .2s ease-in-out;
+  }
+  &:hover {
+    color: $blue70;
+    &::before {
+      width: 100%;
+      background: $blue70;
+    }
+  }
+
+  &:active, &:focus {
+    color: $black;
+    &::before {
+      width: 100%;
+      background: $black;
+    }
+  }
+
+  &:disabled {
+    color: $gray_text;
+    &::before {
+      background: $gray_text;
+    }
+  }
+}
+/*! Defaults End */
+
+// =====================  modules  ========================
+
+@import 'header';
+@import 'footer';
+
+// =====================  Styles  =========================
+
+.section {
+  &__title {
+    color: $black;
+
+    @include m_48_eb;
+
+    & span {
+      color: $blue;
+    }
+  }
+}
+
+.first-screen {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 286px 0;
+
+  & .container {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__subtitle {
+    margin: 24px 0 64px 0;
+
+    @include m_14_r;
+  }
+}
+
+.foreword {
+  & .container > * {
+    max-width: 33.33%;
+  }
+  &__text {
+    align-self: flex-end;
+    padding: 0 0 0 48px;
+  }
+  & .img__wrap {
+    position: relative;
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background: #52525a;
+      content: '<- теперь это *просто* потрясающе!';
+      opacity: .6;
+      -webkit-filter: blur(60px);
+              filter: blur(60px);
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+    }
+  }
+}
+
+
+// =====================  Media  ==========================
+
+@media screen and (max-width: 1199px) {
+}
+
+@media screen and (max-width: 991px) {
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 575px) {
+}
+
+@media screen and (max-width: 319px) {
+}

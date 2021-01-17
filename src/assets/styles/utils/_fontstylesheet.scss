@@ -1,0 +1,12 @@
+//  Add font name like: `@include font-face("fontname", "../fonts/fontname", font-style, font-weight);`
+
+/*! Fonts */
+
+// Example @include font-face('Montserrat', '../fonts/Montserrat-Black', normal, 900);
+@include font-face('Montserrat', '../fonts/Montserrat-ExtraBold', normal, 800);
+@include font-face('Montserrat', '../fonts/Montserrat-Bold', normal, 700);
+@include font-face('Montserrat', '../fonts/Montserrat-SemiBold', normal, 600);
+@include font-face('Montserrat', '../fonts/Montserrat-Medium', normal, 500);
+@include font-face('Montserrat', '../fonts/Montserrat-Regular', normal, 400);
+
+/*! Fonts End */

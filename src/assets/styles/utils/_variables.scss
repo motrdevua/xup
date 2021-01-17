@@ -1,0 +1,134 @@
+$maxWidth: 1158;
+$minWidth: 320;
+$lg: 1188.98;
+$md: 992.98;
+$sm: 768.98;
+$s: 575.98;
+
+// ==================== FONTS =======================
+
+$main_font: 'Montserrat', Helvetica, sans-serif;
+
+// =================== COLORS =======================
+
+// ACCENT COLORS
+$blue: #1421ff;
+$red: #e45851;
+$orange: #ff8b14;
+
+// NEUTRAL COLORS
+$black: #2d2d30;
+$gray_text: #52525a;
+$white: #ffffff;
+$small_blue: #eff0ff;
+$grey: #f5f5f5;
+$blue70: #5b64ff;
+$line_bg: #ebeffb;
+
+@mixin silver_bg {
+  background: linear-gradient(129.87deg, #f2f5fc 3.2%, #e0e4f0 99.49%);
+}
+
+@mixin m_64_b {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 64px;
+  font-family: $main_font;
+  line-height: 80px;
+}
+
+@mixin m_48_eb {
+  font-weight: 800;
+  font-style: normal;
+  font-size: 48px;
+  font-family: $main_font;
+  line-height: 64px;
+}
+
+@mixin m_48_b {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 48px;
+  font-family: $main_font;
+  line-height: 64px;
+}
+
+@mixin m_34_eb {
+  font-weight: 800;
+  font-style: normal;
+  font-size: 34px;
+  font-family: $main_font;
+  line-height: 40px;
+}
+
+@mixin m_30_eb {
+  font-weight: 800;
+  font-style: normal;
+  font-size: 30px;
+  font-family: $main_font;
+  line-height: 40px;
+}
+
+@mixin m_24_b {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 24px;
+  font-family: $main_font;
+  line-height: 32px;
+}
+
+@mixin m_24_m {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 24px;
+  font-family: $main_font;
+  line-height: 32px;
+}
+
+@mixin m_24_m {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 24px;
+  font-family: $main_font;
+  line-height: 32px;
+}
+
+@mixin m_20_b {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+  font-family: $main_font;
+  line-height: 24px;
+}
+
+@mixin m_16_b {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 16px;
+  font-family: $main_font;
+  line-height: 24px;
+}
+
+@mixin m_16_m {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  font-family: $main_font;
+  line-height: 24px;
+}
+
+@mixin m_14_sb {
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  font-family: $main_font;
+  line-height: 24px;
+}
+
+@mixin m_14_r {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  font-family: $main_font;
+  line-height: 24px;
+}
