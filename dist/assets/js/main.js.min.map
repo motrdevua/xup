@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.js"],"names":["window","addEventListener"],"mappings":";;AAAAA,MAAM,CAACC,gBAAP,CAAwB,MAAxB,EAAgC,YAAY,CAAE,CAA9C","sourcesContent":["window.addEventListener(\"load\", function () {});\n"],"file":"main.js"}
+{"version":3,"sources":["main.js"],"names":["window","addEventListener"],"mappings":";;AAAAA,MAAM,CAACC,gBAAP,CAAwB,MAAxB,EAAgC,YAAY,CAAE,CAA9C","sourcesContent":["window.addEventListener(\"load\", function () {});\r\n"],"file":"main.js"}

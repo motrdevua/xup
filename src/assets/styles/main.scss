@@ -217,6 +217,7 @@ a {
 // =====================  Styles  =========================
 
 .section {
+  padding: 0 0 200px 0;
   &__title {
     color: $black;
 
@@ -226,6 +227,14 @@ a {
       color: $blue;
     }
   }
+}
+
+.pl48 {
+  padding: 0 0 0 48px;
+}
+
+h4 {
+  @include m_24_b;
 }
 
 .first-screen {
@@ -247,13 +256,13 @@ a {
   }
 }
 
+/*! foreword */
 .foreword {
   & .container > * {
     max-width: 33.33%;
   }
   &__text {
     align-self: flex-end;
-    padding: 0 0 0 48px;
   }
   & .img__wrap {
     position: relative;
@@ -273,6 +282,77 @@ a {
     }
   }
 }
+/*! foreword end */
+
+/*! mission */
+
+.mission {
+  & .container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 0 0 0;
+  }
+
+  &__block {
+    flex: 0 0 50%;
+    padding-top: 48px;
+  }
+  &__block-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 0 24px 0;
+    width: 40px;
+    height: 40px;
+  }
+}
+/*! mission end */
+
+/*! skills */
+.skills {
+  position: relative;
+  & .container {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__subtitle {
+    padding: 24px 0 0 0;
+  }
+}
+
+.cloud {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 64px 0 0 0;
+  min-width: 140%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+
+  &__item {
+    padding: 0 36px 48px;
+    color: $black;
+
+    @include m_30_m;
+    &--mod {
+      color: $black;
+
+      @include m_30_eb;
+    }
+  }
+}
+/*! skills end */
+
+
 
 
 // =====================  Media  ==========================

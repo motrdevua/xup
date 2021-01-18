@@ -69,6 +69,14 @@ $line_bg: #ebeffb;
   line-height: 40px;
 }
 
+@mixin m_30_m {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  font-family: $main_font;
+  line-height: 40px;
+}
+
 @mixin m_24_b {
   font-weight: bold;
   font-style: normal;
